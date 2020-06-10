@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Absolute</title>
+</head>
+
+<style>
+    .parent{
+        /* border: 5px solid black; */
+        width: 200px;
+        height: 200px;
+        color: white;
+        font-size: 20px;
+        text-align: right;
+    }
+
+    .parent>div{
+        width: 100px;
+        height: 100px;
+    }
+
+    .parent >.d-1{
+        background-color: burlywood;
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+    }
+
+    .parent >.d-2{
+        background-color: navy;
+        position: absolute;
+        z-index: -1;
+        left: 100px;
+        bottom: 100px;
+    }
+
+    .parent >.d-3{
+        background-color: mediumpurple;
+        position: absolute;
+        z-index: -2;
+        left: 150px;
+        bottom: 150px;
+    }
+
+</style>
+
+<body>
+
+    <div class="parent" >
+        <div class="d-1">1</div>
+        <div class="d-2">2</div>
+        <div class="d-3">3</div>
+    </div>
+    
+</body>
+</html>
